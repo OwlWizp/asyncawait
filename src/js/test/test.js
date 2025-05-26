@@ -1,5 +1,4 @@
 import saving from '../app.js';
-import GameSavingLoader from '../GameSavingLoader';
 
 jest.setTimeout(10000);
 
@@ -12,7 +11,4 @@ test('test app save', async () => {
       id: 1, name: 'Hitman', level: 10, points: 2000,
     },
   });
-  
 });
-
-
