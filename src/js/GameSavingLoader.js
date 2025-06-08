@@ -3,8 +3,10 @@ import read from './reader.js';
 
 export default class GameSavingLoader {
   static load() {
-    return new Promise((resolve) => {
-      resolve(read().then(json).then(JSON.parse));
-    });
+    return (async () => {
+      const loadFunc = await read();
+      const jsonStr = await json(loadFunc);
+      return JSON.parse(jsonStr);
+    })();
   }
 }

@@ -1,6 +1,3 @@
 import GameSavingLoader from './GameSavingLoader.js';
 
-export default (async () => {
-  const loadFunc = await GameSavingLoader.load();
-  return loadFunc;
-})();
+export default GameSavingLoader.load();
